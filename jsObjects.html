@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Objects</title>
+</head>
+<body>
+    <script>
+        function printAllCohorts() {
+            let students = [
+                {name: 'Remy', cohort: 'Jan'},
+                {name: 'Genevieve', cohort: 'March'},
+                {name: 'Chuck', cohort: 'Jan'},
+                {name: 'Osmund', cohort: 'June'},
+                {name: 'Nikki', cohort: 'June'},
+                {name: 'Boris', cohort: 'June'}
+            ];
+            for (let info in students) {
+                console.log(`Name: ${students[info]["name"]}, Cohort: ${students[info]['cohort']}`)
+            }
+        }
+        // printAllCohorts()
+
+        let users = {
+            employees: [
+                {'first_name':  'Miguel', 'last_name' : 'Jones'},
+                {'first_name' : 'Ernie', 'last_name' : 'Bertson'},
+                {'first_name' : 'Nora', 'last_name' : 'Lu'},
+                {'first_name' : 'Sally', 'last_name' : 'Barkyoumb'}
+            ],
+            managers: [
+            {'first_name' : 'Lillian', 'last_name' : 'Chambers'},
+            {'first_name' : 'Gordon', 'last_name' : 'Poe'}
+            ]
+        };
+
+        // function employeesAndManagers() {
+        //     for (let user in users) {
+        //         for (employee in user[employees]) {
+        //             console.log(`${employee} - ${users[user][employee]["last_name"]}`)
+        //         }
+        //     }
+        // }
+
+        function try2() {
+            console.log("Employees".toUpperCase())
+            for (employee in users["employees"]) {
+                console.log(`${parseInt(employee) + 1} - ${users["employees"][employee]["last_name"]}, ${users["employees"][employee]["first_name"]} - ` + (users["employees"][employee].last_name.length + users["employees"][employee].first_name.length))
+            }
+
+            console.log("MANAGERS")
+            for (manager in users["managers"]) {
+                console.log(`${parseInt(manager) + 1} - ${users["managers"][manager]["last_name"]}, ${users["managers"][manager]["first_name"]} - ` + (users["managers"][manager].last_name.length + users["managers"][manager].first_name.length))
+            }
+        }
+
+        try2()
+    </script>
+</body>
+</html>

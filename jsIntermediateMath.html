@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Math Intermediate</title>
+</head>
+<body>
+    <script>
+        function starString(num) {
+            var str = ""
+            for (var i = 0; i < num; i++) {
+                str += "*";                
+            }
+            console.log(str)
+            return str
+        }
+
+        function drawStars(arr) {
+            for (var i = 0; i < arr.length; i++) {
+                if (typeof(arr[i]) == "string") {
+                    for (var w = 0; w < arr[i].length; w++) {
+                        console.log(arr[i][0].toLowerCase())
+                    }
+                }
+                else {
+                    starString(arr[i])
+                }
+            }
+        }
+
+        drawStars([1,2,3,4,5,"tom",7,8,"johnny",10])
+    </script>
+</body>
+</html>
